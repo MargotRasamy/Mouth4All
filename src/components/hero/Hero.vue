@@ -43,7 +43,7 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(#704edf2b, #608edd90);
+  
   
 }
 .hero-content {

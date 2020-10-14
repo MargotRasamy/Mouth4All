@@ -37,7 +37,8 @@ export default {
 
       // create scene
       this.scene = new THREE.Scene()
-      this.scene.background = new THREE.Color('transparent')
+
+      // this.scene.background = new THREE.Color('none')
 
       // add lights
       const ambientLight = new THREE.HemisphereLight(
@@ -53,14 +54,14 @@ export default {
       this.controls = new OrbitControls(this.camera, this.container)
 
       // create renderer
-      this.renderer = new THREE.WebGLRenderer({ antialias: true })
+      this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
       this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
       this.renderer.setPixelRatio(window.devicePixelRatio)
       this.renderer.gammaFactor = 2.2
       this.renderer.outputEncoding = THREE.sRGBEncoding
       this.renderer.physicallyCorrectLights = true
       this.container.appendChild(this.renderer.domElement)
-
+      this.renderer.setClearColor( 0x000000, 0 );
       // set aspect ratio to match the new browser window aspect ratio
       this.camera.aspect = this.container.clientWidth / this.container.clientHeight
       this.camera.updateProjectionMatrix()
@@ -101,8 +102,9 @@ export default {
     min-height: 100vh;
     display: flex;
 }
-.webgl {    width: 1200px;    height: 500px;
-outline: none !important;  }
+.webgl {    width: 40rem;    height:30rem;
+outline: none !important;
+margin: auto;  }
 
 
 </style>

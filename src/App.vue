@@ -38,13 +38,14 @@ export default {
   padding: 0;
   display: flex;
   flex-direction: column;
+
 }
 
 body{
   padding: 0;
   margin:0;
-  
-  // background-color: var(--colorPrimaryVeryLight);
+  //background: linear-gradient(#031b63ea, #ec225fb3);
+  background-color: var(--colorPrimaryVeryLight);
 }
 
 </style>
