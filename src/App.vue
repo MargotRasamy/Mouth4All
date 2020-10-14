@@ -1,15 +1,21 @@
 <template>
   <div id="app">
     <Header />
+    <Hero />
+    <Mouth />
+  
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-    
+import Hero from './components/hero/Hero.vue'
+import Mouth from './components/demo/Mouth.vue'  
+import Header from './components/hero/Header.vue'
 export default {
   name: 'App',
   components: {
+    Hero,
+    Mouth,
     Header
   }
 }
@@ -25,21 +31,21 @@ export default {
 @import "./assets/variables/reset.scss";
 @import 'node_modules/bootstrap/scss/bootstrap';
 
-
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
   padding: 0;
-  margin:0;
+  display: flex;
+  flex-direction: column;
 }
 
 body{
   padding: 0;
   margin:0;
-  min-height: 100vh;
-  background-color: var(--colorPurpleVeryLight);
+  
+  // background-color: var(--colorPrimaryVeryLight);
 }
 
 </style>
