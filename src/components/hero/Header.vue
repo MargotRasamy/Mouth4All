@@ -1,17 +1,17 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-color">
-  <a class="navbar-brand" href="#"><img alt="logo" width="200" src="../../assets/logo.png"></a>
-  <button class="navbar-toggler navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Notre vision<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Demo</a>
-      <a class="nav-item nav-link" href="#">Soutenez-nous</a>
+    <a class="navbar-brand" href="#"><img alt="logo" width="200" src="../../assets/logo.png"></a>
+    <button class="navbar-toggler navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Notre vision<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Demo</a>
+        <a class="nav-item nav-link" href="#">Soutenez-nous</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 </template>
 
 <script>
@@ -33,10 +33,9 @@ export default {
   // background-color: var(--colorSecondaryLight);
 }
 .navbar {
-  padding: var(--gutterWidth);
-  position: fixed;
+  padding: var(--spaceM) var(--gutterWidth);
   width:100%;
-  z-index: 1;
+  background-color: none;
   display: flex;
   align-items: flex-end;
 }

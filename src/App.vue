@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    
     <Hero />
     <Mouth />
   
@@ -10,13 +10,12 @@
 <script>
 import Hero from './components/hero/Hero.vue'
 import Mouth from './components/demo/Mouth.vue'  
-import Header from './components/hero/Header.vue'
+
 export default {
   name: 'App',
   components: {
     Hero,
-    Mouth,
-    Header
+    Mouth
   }
 }
 </script>

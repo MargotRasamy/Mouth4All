@@ -1,9 +1,15 @@
 <template>
   <div class="hero">
-
+    <Header />
     <div class="hero-section">
         <HeroCaption />
-        <img src="https://via.placeholder.com/450" />
+        <div class="hero-content">
+          <div class="hero-image">
+            <img class="image" src="../../assets/images/children.svg" />
+          </div>
+        </div>
+        
+        
 
     </div>
     
@@ -13,11 +19,12 @@
 <script>
 
 import HeroCaption from './HeroCaption.vue'
-
+import Header from './Header.vue'
 export default {
   name: 'Hero',
   components: {
-    HeroCaption
+    HeroCaption,
+    Header
   }
 }
 </script>
@@ -36,12 +43,26 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--colorPrimaryVeryLight);
+  background: linear-gradient(#704edf2b, #608edd90);
+  
 }
+.hero-content {
+  width: 50%;
+  .hero-image {
+    width: 70%;
+    margin: auto;
+  }
+  .image {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+
 
 .hero-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: auto;
     @include small{
