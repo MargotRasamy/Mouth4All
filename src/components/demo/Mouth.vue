@@ -1,54 +1,90 @@
 <template>
   <div class="mouth">
-    <canvas class="webgl"></canvas>
+    <div class="webgl"></div>
   </div>
 </template>
 
 <script>
-
-import * as Three from 'three'
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 
 export default {
-  name: 'Mouth',
-  data() {
+  name: 'HelloWorld',
+  data () {
     return {
-      camera: null,
+      container: null,
       scene: null,
-      renderer: null,
-      mesh: null
+      camera: null,
+      controls: null,
+      renderer: null
     }
   },
   methods: {
-    init: function() {
-        let container = document.getElementById('webgl');
+    init () {
+      // set container
+      this.container = document.querySelector('.webgl')
 
-        this.camera = new Three.PerspectiveCamera(70, container.clientWidth/container.clientHeight, 0.01, 10);
-        this.camera.position.z = 1;
+      // add camera
+      const fov = 60 // Field of view
+      const aspect = this.container.clientWidth / this.container.clientHeight
+      const near = 0.1 // the near clipping plane
+      const far = 30 // the far clipping plane
+      const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
+      camera.position.set(0, 5, 10)
+      this.camera = camera
 
-        this.scene = new Three.Scene();
+      // create scene
+      this.scene = new THREE.Scene()
+      this.scene.background = new THREE.Color('transparent')
 
-        let geometry = new Three.BoxGeometry(0.2, 0.2, 0.2);
-        let material = new Three.MeshNormalMaterial();
+      // add lights
+      const ambientLight = new THREE.HemisphereLight(
+        0xffffff, // bright sky color
+        0x222222, // dim ground color
+        1 // intensity
+      )
+      const mainLight = new THREE.DirectionalLight(0xffffff, 4.0)
+      mainLight.position.set(10, 10, 10)
+      this.scene.add(ambientLight, mainLight)
 
-        this.mesh = new Three.Mesh(geometry, material);
-        this.scene.add(this.mesh);
+      // add controls
+      this.controls = new OrbitControls(this.camera, this.container)
 
-        this.renderer = new Three.WebGLRenderer({antialias: true});
-        this.renderer.setSize(container.clientWidth, container.clientHeight);
-        container.appendChild(this.renderer.domElement);
+      // create renderer
+      this.renderer = new THREE.WebGLRenderer({ antialias: true })
+      this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
+      this.renderer.setPixelRatio(window.devicePixelRatio)
+      this.renderer.gammaFactor = 2.2
+      this.renderer.outputEncoding = THREE.sRGBEncoding
+      this.renderer.physicallyCorrectLights = true
+      this.container.appendChild(this.renderer.domElement)
 
+      // set aspect ratio to match the new browser window aspect ratio
+      this.camera.aspect = this.container.clientWidth / this.container.clientHeight
+      this.camera.updateProjectionMatrix()
+      this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
+
+      const loader = new GLTFLoader()
+
+      loader.load(
+        '/models/RobotExpressive.glb',
+        gltf => {
+          this.scene.add(gltf.scene)
+        }
+      )
+
+      this.renderer.setAnimationLoop(() => {
+        this.render()
+      })
     },
-    animate: function() {
-        requestAnimationFrame(this.animate);
-        this.mesh.rotation.x += 0.01;
-        this.mesh.rotation.y += 0.02;
-        this.renderer.render(this.scene, this.camera);
+    render () {
+      this.renderer.render(this.scene, this.camera)
     }
   },
-  mounted() {
-      this.init();
-      this.animate();
+  mounted () {
+    this.init()
   }
 }
 </script>
@@ -65,7 +101,8 @@ export default {
     min-height: 100vh;
     display: flex;
 }
-canvas {    width: 100%;    height: 100%  }
+.webgl {    width: 1200px;    height: 500px;
+outline: none !important;  }
 
 
 </style>
