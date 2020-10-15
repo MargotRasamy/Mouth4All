@@ -1,13 +1,16 @@
 <template>
   <router-link class="button button--purple">
-      Soutenez-nous
+      {{ text }}
   </router-link>
 </template>
 
 <script>
 
 export default {
-  name: "Button"
+  name: "Button",
+  props: [
+      'text'
+  ]
 };
 </script>
 

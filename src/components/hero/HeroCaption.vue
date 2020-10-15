@@ -1,10 +1,10 @@
 <template>
   <div class="hero-caption">
     <h1>Mouth4All</h1>
-    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+    <p>La nouvelle Web App qui permet aux sourds et malentendants de s'intégrer plus facilement dans les écoles, en apprenant la prononciation grâce à une bouche 3D qui mime le mouvement des mots. </p>
     <span class="cta">
-        <Button />
-        <Button />
+        <Button text="Soutenez-nous"/>
+        <Button text="Voir la vidéo"/>
     </span>
     
   </div>
@@ -28,22 +28,33 @@ export default {
 @import "../../assets/variables/misc.scss";
 @import "../../assets/variables/reset.scss";
 
+
+
 .hero-caption {
   margin-top: 0;
     width: 50%;
-    padding: var(--spaceL);
+    padding: var(--spaceXL);
     @include small{
       width: 100%;
+      padding: var(--spaceM);
     }
     @include medium{
       width: 100%;
+      padding: var(--spaceM);
     }
 }
 
+@font-face {
+  font-family: 'DMSansBold';
+  src: url("../../assets/fonts/DM_Sans/DMSans-Bold.ttf");
+}
+
 h1 {
+    font-family: DMSansBold;
     font-size: 4.8rem;
     margin-bottom: var(--spaceS);
     color: var(--colorSecondary);
+    
 }
 .cta {
     display: flex;

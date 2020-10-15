@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     
-    <Hero />
-    <Mouth />
+    <Hero data-background="section1"  />
+    <Mouth data-background="section2" id="demo" />
+    <Video data-background="section3" id="video" />
+    
   
   </div>
 </template>
@@ -10,14 +12,44 @@
 <script>
 import Hero from './components/hero/Hero.vue'
 import Mouth from './components/demo/Mouth.vue'  
+import Video from './components/video/Video.vue'  
 
 export default {
   name: 'App',
   components: {
     Hero,
-    Mouth
+    Mouth,
+    Video
+  }, 
+  mounted() {
+      const colors = ['color-section1', 'color-section2', 'color-section3']
+
+      const sections = document.querySelectorAll('div[data-background]')
+
+      window.addEventListener('scroll', function () {
+
+        const scrollFromTop = window.scrollY
+
+
+
+        for (let i = 0; i < sections.length; i++) {
+
+          if (scrollFromTop <= (sections[i].offsetTop + 500) ) {
+            document.body.className = colors[i] 
+            break
+          } 
+
+        }
+
+      })
   }
 }
+
+
+
+
+
+
 </script>
 
 <style lang="scss">
@@ -30,8 +62,13 @@ export default {
 @import "./assets/variables/reset.scss";
 @import 'node_modules/bootstrap/scss/bootstrap';
 
+@font-face {
+  font-family: 'DMSans' ;
+  src: url("./assets/fonts/DM_Sans/DMSans-Regular.ttf");
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: DMSans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -41,11 +78,32 @@ export default {
 
 }
 
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--colorPrimaryVeryLight); 
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--colorPrimary); 
+}
+
 body{
   padding: 0;
   margin:0;
   //background: linear-gradient(#031b63ea, #ec225fb3);
-  background-color: var(--colorPrimaryVeryLight);
+
+  transition: all 0.5s ease;
+}
+
+.color-section1 {
+   background-color: var(--colorWhite);
+  // background-image: url('./assets/images/bg.jpg');
+  // background-size: contain;
+}
+.color-section2 {
+  background-color: var(--colorSecondaryLight);
+}
+.color-section3 {
+  background-color:var(--colorPrimaryVeryLight);
 }
 
 </style>

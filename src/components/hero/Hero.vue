@@ -39,11 +39,10 @@ export default {
 
 .hero {
   margin: 0;
-  padding: 0 var(--gutterWidth);
+  padding: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
   
 }
 .hero-content {

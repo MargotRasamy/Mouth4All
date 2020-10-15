@@ -7,17 +7,35 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="#">Notre vision<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Demo</a>
-        <a class="nav-item nav-link" href="#">Soutenez-nous</a>
+        <a class="nav-item nav-link" href="#demo">Demo</a>
+        <a class="nav-item nav-link" href="#video">Soutenez-nous</a>
+        
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+
 export default {
-  name: 'Header'
+  name: 'Header',
+  mounted() {
+    const links = document.querySelectorAll('.nav-item')
+     
+    for(let i = 0 ; i< links.length ; i ++) {
+      links[i].addEventListener('click',
+      () => {
+        Array.from(links, link => link.classList.remove('active'));
+        links[i].classList.add('active');
+      })
+    }
+      
+    
+    
+      
+  }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -29,17 +47,20 @@ export default {
 @import "../../assets/variables/reset.scss";
 
 
-.bg-color {
-  // background-color: var(--colorSecondaryLight);
-}
 .navbar {
   padding: var(--spaceM) var(--gutterWidth);
   width:100%;
-  background-color: none;
+  background-color: rgba(250,250,250, 0.9);
+  
   display: flex;
   align-items: flex-end;
+  position: fixed;
+  z-index: 1;
+  
 }
-
+.active {
+  color: var(--colorPrimary) !important;
+}
 
 .navbar-toggle {
   border:0;

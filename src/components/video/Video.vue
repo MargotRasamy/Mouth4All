@@ -1,0 +1,60 @@
+<template>
+  <div class="video-section">
+    <span class="video-wrap">
+        <a href="#"><img class="play" src="../../assets/images/play-button.svg" alt="play-button" /> </a>
+        <video src="../../assets/videos/vid.mp4" controls />
+    </span>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Video'
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+@import "../../assets/variables/colors.scss";
+@import "../../assets/variables/spaces.scss";
+@import "../../assets/variables/medias.scss";
+@import "../../assets/variables/misc.scss";
+@import "../../assets/variables/reset.scss";
+
+.video-section {
+    min-height: 100vh;
+    display: flex;
+}
+.video-wrap {
+    padding: 0;
+    display: flex;
+    margin: auto;
+    box-shadow: var(--boxShadow);
+    border-radius: var(--borderRadiusMedium);
+    position: relative;
+    outline: none;
+    a {
+        cursor: pointer;
+    }
+    .play {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        right: calc(50% - 2.5rem);
+        top: calc(50% - 2.5rem);
+        opacity: 0.7;
+    }
+}
+
+
+video {
+    border-radius: var(--borderRadiusMedium);
+    margin: auto;
+    padding: 0;
+    background-color: black;
+    outline: none;
+    width: 80vw;
+    height: 80vh;
+}
+
+</style>
