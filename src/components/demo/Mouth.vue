@@ -6,7 +6,7 @@
 
 <script>
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 
@@ -27,12 +27,10 @@ export default {
       this.container = document.querySelector('.webgl')
 
       // add camera
-      const fov = 60 // Field of view
-      const aspect = this.container.clientWidth / this.container.clientHeight
-      const near = 0.1 // the near clipping plane
-      const far = 30 // the far clipping plane
-      const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
-      camera.position.set(0, 5, 10)
+      var camera = new THREE.PerspectiveCamera(70, 
+      window.innerWidth/window.innerHeight, 0.1, 1000 ); // Specify camera type like this
+      camera.position.set(0,0,5); // Set position like this
+      camera.lookAt(new THREE.Vector3(0,0,0));
       this.camera = camera
 
       // create scene
@@ -51,17 +49,17 @@ export default {
       this.scene.add(ambientLight, mainLight)
 
       // add controls
-      this.controls = new OrbitControls(this.camera, this.container)
+      // this.controls = new OrbitControls(this.camera, this.container)
 
       // create renderer
       this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
       this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
       this.renderer.setPixelRatio(window.devicePixelRatio)
-      this.renderer.gammaFactor = 2.2
-      this.renderer.outputEncoding = THREE.sRGBEncoding
-      this.renderer.physicallyCorrectLights = true
+      // this.renderer.gammaFactor = 2.2
+      // this.renderer.outputEncoding = THREE.sRGBEncoding
+      // this.renderer.physicallyCorrectLights = true
       this.container.appendChild(this.renderer.domElement)
-      this.renderer.setClearColor( 0x000000, 0 );
+      // this.renderer.setClearColor( 0x000000, 0 );
       // set aspect ratio to match the new browser window aspect ratio
       this.camera.aspect = this.container.clientWidth / this.container.clientHeight
       this.camera.updateProjectionMatrix()
@@ -70,7 +68,7 @@ export default {
       const loader = new GLTFLoader()
 
       loader.load(
-        '/models/RobotExpressive.glb',
+        '/models/Girl.gltf',
         gltf => {
           this.scene.add(gltf.scene)
         }

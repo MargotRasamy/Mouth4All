@@ -1,8 +1,8 @@
 <template>
   <div class="caption">
-    <h2>Aidez-nous à aider les autres</h2>
-    <p>En soutenant notre innovation technologique, vous nous aiderez à rendre le quotidien des enfants atteints de déficience auditives plus agréable. Que vous soyez concerné ou non, si notre projet vous tient à cœur, soutenez-nous :</p>
-    <a href="www.google.com" target="_blank">www.ulule.com/Mouth4All</a>
+    <h2>{{ title }}</h2>
+    <p>{{ content }}</p>
+    <a v-if="link" href="www.google.com" target="_blank">www.ulule.com/Mouth4All</a>
     <!-- <span class="cta">
         <Button text="Soutenez-nous" path="#video" color="button--primary"/>
         <Button text="Voir la vidéo" path="#video" color="button--secondary"/>
@@ -13,7 +13,12 @@
 
 <script>
 export default {
-  name: 'Caption'
+  name: 'Caption',
+  props: [
+      'title',
+      'content',
+      'link'
+  ]
 }
 </script>
 

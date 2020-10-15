@@ -2,9 +2,10 @@
   <div id="app">
     
     <Hero data-background="section1"  />
-    <Mouth data-background="section2" id="demo" />
-    <Video data-background="section3" id="video" />
-    <Crowdfunding data-background="section4" />
+    <Demos data-background="section2" />
+    <!-- <Mouth data-background="section2" id="demo" /> -->
+    <Video data-background="section3" id="demo" />
+    <Crowdfunding data-background="section4" id="crowd" />
     
   
   </div>
@@ -12,7 +13,7 @@
 
 <script>
 import Hero from './components/hero/Hero'
-import Mouth from './components/demo/Mouth'  
+import Demos from './components/demo/Demos'
 import Video from './components/video/Video'
 import Crowdfunding from './components/crowdfund/Crowdfunding'
 
@@ -20,7 +21,7 @@ export default {
   name: 'App',
   components: {
     Hero,
-    Mouth,
+    Demos,
     Video,
     Crowdfunding
   }, 

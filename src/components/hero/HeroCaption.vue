@@ -3,8 +3,8 @@
     <h1>Mouth4All</h1>
     <p>La nouvelle Web App qui permet aux sourds et malentendants de s'intégrer plus facilement dans les écoles, en apprenant la prononciation grâce à une bouche 3D qui mime le mouvement des lèvres. </p>
     <span class="cta">
-        <Button text="Soutenez-nous" path="#video" color="button--primary"/>
-        <Button text="Voir la vidéo" path="#video" color="button--secondary"/>
+        <Button text="Soutenez-nous" path="#crowd" color="button--primary"/>
+        <Button text="Voir la vidéo" path="#demo" color="button--secondary"/>
     </span>
     
   </div>
@@ -69,7 +69,7 @@ h1 {
     @include small{
       display: grid;
       grid-template-columns: repeat(2, auto);
-      grid-column-gap: 2vh;
+      grid-column-gap: 2vw;
       & .button {
       width: 100%;
       padding: var(--spaceM);
@@ -81,7 +81,7 @@ h1 {
     @include medium{
       display: grid;
       grid-template-columns: repeat(2, auto);
-      grid-column-gap: 2vh;
+      grid-column-gap: 4vw;
       & .button {
       width: 100%;
       padding: var(--spaceM);

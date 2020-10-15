@@ -7,8 +7,8 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="#">Notre vision<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#demo">Demo</a>
-        <a class="nav-item nav-link" href="#video">Soutenez-nous</a>
+        <a class="nav-item nav-link" href="#demo">Vidéo</a>
+        <a class="nav-item nav-link" href="#crowd">Soutenez-nous</a>
         
       </div>
     </div>

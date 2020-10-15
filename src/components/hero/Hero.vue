@@ -49,6 +49,12 @@ export default {
   .hero-image {
     width: 70%;
     margin: auto;
+    @include small{
+      width: 90%;
+    }
+    @include medium{
+       width: 90%;
+    }
   }
   .image {
     object-fit: cover;
@@ -64,11 +70,11 @@ export default {
     align-items: center;
     margin: auto;
     @include small{
-      flex-direction: column;
+      flex-direction: column-reverse;
       text-align: center;
     }
     @include medium{
-      flex-direction: column;
+      flex-direction: column-reverse;
       text-align: center;
     }
 }
