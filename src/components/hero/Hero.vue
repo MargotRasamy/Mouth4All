@@ -43,7 +43,6 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
 }
 .hero-content {
   width: 50%;

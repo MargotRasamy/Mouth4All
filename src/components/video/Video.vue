@@ -1,7 +1,7 @@
 <template>
   <div class="video-section">
-    <span class="video-wrap">
-        <a href="#"><img class="play" src="../../assets/images/play-button.svg" alt="play-button" /> </a>
+    <span class="video-wrap" @click="play">
+        <a alt="btn" class="play"><img src="../../assets/images/play-button.svg" alt="play-button" /> </a>
         <video src="../../assets/videos/vid.mp4" controls />
     </span>
   </div>
@@ -9,7 +9,15 @@
 
 <script>
 export default {
-  name: 'Video'
+  name: 'Video',
+  methods: {
+      play() {
+          const video = document.querySelector('video')
+        const btn = document.querySelector('.play')
+            btn.classList.toggle('invisible')
+            video.play()
+      }
+  }
 }
 </script>
 
@@ -33,20 +41,27 @@ export default {
     border-radius: var(--borderRadiusMedium);
     position: relative;
     outline: none;
+
     a {
         cursor: pointer;
-    }
-    .play {
         position: absolute;
+        z-index: 1;
         width: 5rem;
         height: 5rem;
         right: calc(50% - 2.5rem);
         top: calc(50% - 2.5rem);
         opacity: 0.7;
     }
+    img {
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
 }
 
-
+.invisible {
+    display: none;
+}
 video {
     border-radius: var(--borderRadiusMedium);
     margin: auto;

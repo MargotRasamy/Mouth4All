@@ -55,7 +55,7 @@ export default {
   display: flex;
   align-items: flex-end;
   position: fixed;
-  z-index: 1;
+  z-index: 9;
   
 }
 .active {

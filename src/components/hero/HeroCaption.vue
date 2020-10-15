@@ -1,7 +1,7 @@
 <template>
   <div class="hero-caption">
     <h1>Mouth4All</h1>
-    <p>La nouvelle Web App qui permet aux sourds et malentendants de s'intégrer plus facilement dans les écoles, en apprenant la prononciation grâce à une bouche 3D qui mime le mouvement des mots. </p>
+    <p>La nouvelle Web App qui permet aux sourds et malentendants de s'intégrer plus facilement dans les écoles, en apprenant la prononciation grâce à une bouche 3D qui mime le mouvement des lèvres. </p>
     <span class="cta">
         <Button text="Soutenez-nous"/>
         <Button text="Voir la vidéo"/>
