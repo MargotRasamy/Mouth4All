@@ -12,7 +12,7 @@ export default {
   name: 'Video',
   methods: {
       play() {
-          const video = document.querySelector('video')
+        const video = document.querySelector('video')
         const btn = document.querySelector('.play')
             btn.classList.toggle('invisible')
             video.play()

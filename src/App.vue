@@ -4,25 +4,28 @@
     <Hero data-background="section1"  />
     <Mouth data-background="section2" id="demo" />
     <Video data-background="section3" id="video" />
+    <Crowdfunding data-background="section4" />
     
   
   </div>
 </template>
 
 <script>
-import Hero from './components/hero/Hero.vue'
-import Mouth from './components/demo/Mouth.vue'  
-import Video from './components/video/Video.vue'  
+import Hero from './components/hero/Hero'
+import Mouth from './components/demo/Mouth'  
+import Video from './components/video/Video'
+import Crowdfunding from './components/crowdfund/Crowdfunding'
 
 export default {
   name: 'App',
   components: {
     Hero,
     Mouth,
-    Video
+    Video,
+    Crowdfunding
   }, 
   mounted() {
-      const colors = ['color-section1', 'color-section2', 'color-section3']
+      const colors = ['color-section1', 'color-section2', 'color-section3', 'color-section4']
 
       const sections = document.querySelectorAll('div[data-background]')
 
@@ -104,6 +107,9 @@ body{
 }
 .color-section3 {
   background-color:var(--colorPrimaryVeryLight);
+}
+.color-section4 {
+  background-color:var(--colorPrimaryLight);
 }
 
 </style>
