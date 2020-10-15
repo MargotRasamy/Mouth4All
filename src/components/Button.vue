@@ -1,7 +1,7 @@
 <template>
-  <router-link class="button button--purple">
+  <a :href="path" class="button" :class="color">
       {{ text }}
-  </router-link>
+  </a>
 </template>
 
 <script>
@@ -9,7 +9,9 @@
 export default {
   name: "Button",
   props: [
-      'text'
+      'text',
+      'path',
+      'color'
   ]
 };
 </script>
@@ -37,7 +39,7 @@ export default {
     cursor: pointer;
 }
 
-.button--purple {
+.button--primary {
     background-color: var(--colorPrimary);
     color: var(--colorWhite);
     box-shadow: var(--boxShadowPrimary);
@@ -47,7 +49,7 @@ export default {
     }
 }
 
-.button--yellow {
+.button--secondary {
     background-color: var(--colorSecondary);
     color: var(--colorWhite);
     box-shadow: var(--boxShadowSecondary);
