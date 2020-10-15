@@ -1,13 +1,15 @@
 <template>
   <div class="caption">
     <h2>{{ title }}</h2>
-    <p>{{ content }}</p>
-    <a v-if="link" href="www.google.com" target="_blank">www.ulule.com/Mouth4All</a>
+    <p v-if="content">{{ content }}</p>
+    <p class="content3" v-if="content3"> {{ content3 }}</p>
+    <p class="content2" v-if="content2"> {{ content2 }}</p>
+    <a class="link" v-if="link" href="www.google.com" target="_blank">www.ulule.com/Mouth4All</a>
     <!-- <span class="cta">
         <Button text="Soutenez-nous" path="#video" color="button--primary"/>
         <Button text="Voir la vidéo" path="#video" color="button--secondary"/>
     </span> -->
-    
+  
   </div>
 </template>
 
@@ -17,7 +19,9 @@ export default {
   props: [
       'title',
       'content',
-      'link'
+      'link',
+      'content2',
+      'content3'
   ]
 }
 </script>
@@ -30,13 +34,23 @@ export default {
 @import "../../assets/variables/misc.scss";
 @import "../../assets/variables/reset.scss";
 
-
+.link {
+  word-wrap: break-word;
+  @include small{
+      font-size: 1.6rem;
+    }
+    @include medium{
+       font-size: 1.2rem;
+    }
+}
 a {
     text-decoration: none;
     font-size: 1.8rem;
     color: rgb(0, 157, 255);
 }
 .caption {
+  
+  list-style-type: space-counter;
   margin: 5vh auto;
     width: 70%;
     padding: var(--spaceXL);
@@ -48,6 +62,15 @@ a {
       width: 100%;
       padding: var(--spaceM);
     }
+}
+
+.content2, .content3{
+  display:list-item;
+  list-style-position: inside;
+  margin-top: 1rem;
+  list-style: "\1F3B2";
+  padding-left: 1rem;
+  margin-left: 1rem;
 }
 
 @font-face {

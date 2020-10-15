@@ -1,21 +1,24 @@
 <template>
-  <div class="demos">
-    <div class="caption-container">
-        <Caption title="Donnez la voix à chacun." 
-        content="Votre enfant pourra s'entraîner à parler afin de communiquer plus facilement avec le monde qui l'entoure. "/>
+    <div class="gamification">
+        <div class="caption-container">
+            <Caption title="Un concept ludique qui favorise la progression" 
+            content2="Carte de progression à la Candy Crush : chaque niveau correspond à une section de mots (champ lexicaux, prépositions…)."
+            content3="Avatar personnalisable par le joueur."
+            />
+        </div>
+        <div class="image">
+            <span class="image-container">
+                <img src="../../assets/images/cards.png" />
+            </span>
+        </div>
     </div>
-    <div class="image">
-        <span class="image-container">
-            <img src="../../assets/images/mouthfront.gif" />
-        </span>
-    </div>
-  </div>
 </template>
 
 <script>
 import Caption from '../crowdfund/Caption'
+
 export default {
-  name: 'Demos',
+  name: 'Gamification2',
   components: {
       Caption
   }
@@ -31,7 +34,8 @@ export default {
 @import "../../assets/variables/misc.scss";
 @import "../../assets/variables/reset.scss";
 
-.demos {
+
+.gamification {
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -55,7 +59,6 @@ export default {
 }
 
 .image {
-    background-color: black;
     width: 50%;
     display: flex;
     margin: auto;
@@ -66,14 +69,21 @@ export default {
        width: 90%;
     }
     .image-container {
-        width: 75%;
+        width: 50%;
         margin: auto;
+     @include small{
+      width: 70%;
+    }
+    @include medium{
+       width: 60%;
+    }
         img {
-            width:100%;
+        
+            width: 100%;
             object-fit: cover;
+    
+            background-blend-mode:screen
             // mix-blend-mode: screen;
-            //background-blend-mode:screen;
-           
         }
     }
 }

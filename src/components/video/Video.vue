@@ -70,6 +70,12 @@ video {
     outline: none;
     width: 80vw;
     height: 80vh;
+    @include small{
+      height: 50vh;
+    }
+    @include medium{
+       height: 70vh;
+    }
 }
 
 </style>

@@ -3,13 +3,15 @@
       <div class="container">
         <div class="row d-flex justify-content-between">
           <div class="col-sm-12 col-md-6 colum">
-            <h6>About</h6>
-            <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            <h6>A propos</h6>
+            <p class="text-justify">Mouth4All est une startup fondé en 2020 à but non-lucratif dans le service se veut complètement accessible et inclusif. Aucun frais ni abonnement requis.</p>
+            <p class="text-justify">Afin d'en savoir plus sur le projet et de le soutenir, visitez <a href="www.google.com" target="_blank">www.ulule.com/Mouth4All</a></p>
+            
           </div>
 
           
 
-          <div class="col-xs-6 col-md-3 colum">
+          <!-- <div class="col-xs-6 col-md-3 colum">
             <h6>Quick Links</h6>
             <ul class="footer-links">
               <li><a href="http://scanfcode.com/about/">About Us</a></li>
@@ -18,7 +20,8 @@
               <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
               <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
             </ul>
-          </div>
+          </div> -->
+
         </div>
         <hr>
         </div>
@@ -32,10 +35,9 @@
 
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                <li><a class="twitter" target="_blank" href="https://www.instagram.com/mouth_4all"><i class="fa fa-instagram"></i></a></li>
+                <li><a class="facebook" target="_blank" href="https://www.facebook.com/Mouth4All-113684567178983"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="linkedin" target="_blank" href="https://www.linkedin.com/company/mouth4all/"><i class="fa fa-linkedin"></i></a></li>   
                 </ul>
             </div>
             </div>
@@ -90,7 +92,7 @@ h6 {
 }
 .site-footer h6
 {
-  color:#fff;
+  color:var(--colorWhite);
   font-size:16px;
   text-transform:uppercase;
   margin-top:5px;

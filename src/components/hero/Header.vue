@@ -50,7 +50,7 @@ export default {
 .navbar {
   padding: var(--spaceM) var(--gutterWidth);
   width:100%;
-  background-color: rgba(250,250,250, 0.9);
+  background-color: rgba(250,250,250, 0.95);
   
   display: flex;
   align-items: flex-end;

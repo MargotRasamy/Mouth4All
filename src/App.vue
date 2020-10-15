@@ -5,7 +5,9 @@
     <Demos data-background="section2" />
     <!-- <Mouth data-background="section2" id="demo" /> -->
     <Video data-background="section3" id="demo" />
-    <Crowdfunding data-background="section4" id="crowd" />
+    <Gamification2 data-background="section4" />
+    <Gamification data-background="section4" />
+    <Crowdfunding data-background="section5" id="crowd" />
     
   
   </div>
@@ -16,6 +18,8 @@ import Hero from './components/hero/Hero'
 import Demos from './components/demo/Demos'
 import Video from './components/video/Video'
 import Crowdfunding from './components/crowdfund/Crowdfunding'
+import Gamification from './components/demo/Gamification'
+import Gamification2 from './components/demo/Gamification2'
 
 export default {
   name: 'App',
@@ -23,10 +27,12 @@ export default {
     Hero,
     Demos,
     Video,
-    Crowdfunding
+    Crowdfunding,
+    Gamification,
+    Gamification2,
   }, 
   mounted() {
-      const colors = ['color-section1', 'color-section2', 'color-section3', 'color-section4']
+      const colors = ['color-section1', 'color-section2', 'color-section3', 'color-section4', 'color-section5', 'color-section5']
 
       const sections = document.querySelectorAll('div[data-background]')
 
@@ -107,9 +113,12 @@ body{
   background-color: var(--colorSecondaryLight);
 }
 .color-section3 {
-  background-color:var(--colorPrimaryVeryLight);
+  background-color:var(--colorSecondaryLight);
 }
 .color-section4 {
+  background-color:var(--colorPrimaryVeryLight);
+}
+.color-section5 {
   background-color:var(--colorPrimaryLight);
 }
 

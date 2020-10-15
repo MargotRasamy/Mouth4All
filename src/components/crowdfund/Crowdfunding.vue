@@ -3,6 +3,7 @@
         <Caption link="true" title="Aidez-nous à aider les autres"
         content="En soutenant notre innovation technologique, vous nous aiderez à rendre le quotidien des enfants atteints de déficience auditives plus agréable. Que vous soyez concerné ou non, si notre projet vous tient à cœur, soutenez-nous :" />
         <Footer />
+        <img class="phone" src="../../assets/images/phone.png" alt="phone" />
     </div>
 </template>
 
@@ -32,10 +33,34 @@ export default {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+    & .caption {
+       @include small{
+    padding: 0 2rem;
+    }
+    @include medium{
+     padding: 0 2rem;
+    } 
+    }
    
 }
 
+.phone {
+    position: absolute;
+    z-index: 2;
+    right: 2vw;
+    top: 5vh;
 
+     @include small{
+    display: none;
+    }
+    @include medium{
+     display: none;
+    }
+    @include large{
+     display: none;
+    }
+}
 
 
 </style>

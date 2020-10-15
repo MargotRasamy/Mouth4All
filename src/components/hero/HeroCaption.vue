@@ -54,7 +54,12 @@ h1 {
     font-size: 4.8rem;
     margin-bottom: var(--spaceS);
     color: var(--colorSecondary);
-    
+    @include small{
+      font-size: 2.4rem;
+    }
+    @include small{
+      font-size: 3.6rem;
+    }
 }
 .cta {
     display: flex;
@@ -67,9 +72,7 @@ h1 {
       margin-right: var(--spaceS);
     }
     @include small{
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      grid-column-gap: 2vw;
+      flex-direction: column;
       & .button {
       width: 100%;
       padding: var(--spaceM);
