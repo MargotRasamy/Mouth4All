@@ -4,7 +4,7 @@
     <p v-if="content">{{ content }}</p>
     <p class="content3" v-if="content3"> {{ content3 }}</p>
     <p class="content2" v-if="content2"> {{ content2 }}</p>
-    <a class="link" v-if="link" href="www.google.com" target="_blank">www.ulule.com/Mouth4All</a>
+    <a class="link" v-if="link" href="#" target="_blank">www.ulule.com/Mouth4All</a>
     <!-- <span class="cta">
         <Button text="Soutenez-nous" path="#video" color="button--primary"/>
         <Button text="Voir la vidéo" path="#video" color="button--secondary"/>

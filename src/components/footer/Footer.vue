@@ -5,7 +5,7 @@
           <div class="col-sm-12 col-md-6 colum">
             <h6>A propos</h6>
             <p class="text-justify">Mouth4All est une startup à but non-lucratif dont le service se veut complètement accessible et inclusif. Aucun frais ni abonnement requis.</p>
-            <p class="text-justify">Afin d'en savoir plus sur le projet et de le soutenir, visitez <a href="www.google.com" target="_blank">www.ulule.com/Mouth4All</a></p>
+            <p class="text-justify">Afin d'en savoir plus sur le projet et de le soutenir, visitez <a href="#" target="_blank">www.ulule.com/Mouth4All</a></p>
             
           </div>
 
