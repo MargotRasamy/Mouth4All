@@ -1,8 +1,8 @@
 <template>
   <div class="demos">
     <div class="caption-container">
-        <Caption title="Donnez la voix à chacun." 
-        content="Votre enfant pourra s'entraîner à parler afin de communiquer plus facilement avec le monde qui l'entoure. "/>
+        <Caption title="Donnez une voix à chacun." 
+        content="Vos enfants pourront entraîner leur élocution afin de communiquer plus facilement avec le monde qui les entoure. Offrez-leur le choix et l'opportunité d'exprimer leurs rêves et maximisez leurs chances de s'épanouir en milieu social."/>
     </div>
     <div class="image">
         <span class="image-container">

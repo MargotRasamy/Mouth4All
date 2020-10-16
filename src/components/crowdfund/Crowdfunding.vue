@@ -1,7 +1,7 @@
 <template>
     <div class="crowdfunding">
         <Caption link="true" title="Aidez-nous à aider les autres"
-        content="En soutenant notre innovation technologique, vous nous aiderez à rendre le quotidien des enfants atteints de déficience auditives plus agréable. Que vous soyez concerné ou non, si notre projet vous tient à cœur, soutenez-nous :" />
+        content="En soutenant notre innovation technologique, vous nous aiderez à rendre le quotidien des enfants atteints de déficiences auditives plus agréable. Que vous soyez concerné ou non, si notre projet vous tient à cœur, soutenez-nous :" />
         <Footer />
         <img class="phone" src="../../assets/images/phone.png" alt="phone" />
     </div>

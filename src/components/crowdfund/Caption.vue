@@ -37,16 +37,16 @@ export default {
 .link {
   word-wrap: break-word;
   @include small{
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
     @include medium{
-       font-size: 1.2rem;
+       font-size: 1.6rem;
     }
 }
 a {
     text-decoration: none;
     font-size: 1.8rem;
-    color: rgb(0, 157, 255);
+    color: var(--colorWhite);
 }
 .caption {
   

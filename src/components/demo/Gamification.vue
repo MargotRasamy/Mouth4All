@@ -8,7 +8,7 @@
         <div class="caption-container">
             <Caption title="Apprendre des mots sous la forme d'un jeu d’aventure" 
             content2="Quêtes pour compléter 3 sessions sur un thème de vocabulaire."
-            content3="A chaque niveau passé, de nouvelles sections de mots sont débloquées et de nouveaux accessoires pour l’avatar sont débloqués."
+            content3="A chaque niveau passé, de nouvelles sections de mots et de nouveaux accessoires pour l’avatar sont débloqués."
             />
         </div>
         

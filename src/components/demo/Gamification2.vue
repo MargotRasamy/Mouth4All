@@ -2,7 +2,7 @@
     <div class="gamification">
         <div class="caption-container">
             <Caption title="Un concept ludique qui favorise la progression" 
-            content2="Carte de progression à la Candy Crush : chaque niveau correspond à une section de mots (champ lexicaux, prépositions…)."
+            content2="Carte de progression à la Candy Crush : chaque niveau correspond à une section de mots (champs lexicaux, prépositions…)."
             content3="Avatar personnalisable par le joueur."
             />
         </div>

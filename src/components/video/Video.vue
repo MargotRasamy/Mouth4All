@@ -41,7 +41,9 @@ export default {
     border-radius: var(--borderRadiusMedium);
     position: relative;
     outline: none;
-
+    @include small{
+        cursor: pointer;
+    }
     a {
         cursor: pointer;
         position: absolute;
@@ -51,6 +53,9 @@ export default {
         right: calc(50% - 2.5rem);
         top: calc(50% - 2.5rem);
         opacity: 0.7;
+        @include small{
+        display: none;
+      }
     }
     img {
         width: 100%;
@@ -68,13 +73,19 @@ video {
     padding: 0;
     background-color: black;
     outline: none;
-    width: 80vw;
-    height: 80vh;
+    width: 76vw;
+    height: 76vh;
+    max-width: 76vw;
+    max-height: 76vh;
     @include small{
       height: 50vh;
     }
     @include medium{
        height: 70vh;
+    }
+    @include large{
+       width: 80vw;
+      height: 80vh;
     }
 }
 
